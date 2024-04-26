@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STUDENTS</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'students.css' %}">
+</head>
+<body>
+    <div id="Students">
+    <h2>Students</h2>
+    <b><p>🎓 Student Description 📚 
+        A student is an individual engaged in academic learning, typically enrolled in an educational institution such as a school or university. They strive for knowledge 📚, growth 🌱, and personal development 🧠 while balancing studies 📝, extracurricular activities 🎨, 
+        and social interactions 🤝. Students represent the future 🌟 of society.</p></b>
+        <b><p>Here are random students:</p></b>
+           <p>Name:<i>{{name}}</i></p>
+           <p>Age:<i>{{age}}</i></p>
+           <p>Gender:<i>{{gender}}</i></p>
+           <p>Address:<i>{{address}}</i></p>
+          <!-- <p><i>{{country}}</i></p> -->
+           <p>Course:<i>{{course}}</i></p>
+           <p>GPA:<i>{{gpa}}</i></p>
+           <!-- <p><i>Image:</i> <img src="{{image}}" alt="Various dogs photos"></p> -->
+          <p>Email:<i>{{email}}</i></p>
+          <p>Phone:<i>{{phone}}</i></p>
+    </div>
+</body>
+</html>

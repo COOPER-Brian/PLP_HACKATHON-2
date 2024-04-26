@@ -6,18 +6,16 @@
     <title>WELCOME</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'base.css' %} ">
-    <!-- <a href="randomfacts.html">RandomFacts</a> -->
     <marquee id="marquee">WELCOME</marquee>
 </head>
 
 <body bgcolor="cream">
-    <div class="dog-container">
-        <div class="dog">
-            <div class="tail"></div>
-        </div>
-    </div>
-<div id="About">
-        <h1>ABOUT</h1>
+<div class="animated">
+    <p><img src="{% static 'media/download.jpeg'  %}"></div></p>
+
+    <div id="About">
+       <h1>ABOUT</h1>
+       <a href="{% static 'randomfacts/' %}">Random Facts</a>
 <hr>
         <p id="p1">Lets see what this is all About!!</p>
         <b><p>Absolutely! Here's a description of dogs:
@@ -52,9 +50,8 @@
         <b><p id="p1" >Are you a dog lover ?</p></b>
         <p>Here are some breeds that you may like...</p>
         <img src="{{dog}}" alt="Various dogs photos">
-         
+</div>
 
-        </div>
 </body>
 
 </html>
