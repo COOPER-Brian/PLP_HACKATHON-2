@@ -9,4 +9,7 @@ def base(request):
     return render(request, 'base.html', {'dog' : dog})
 
 def randomfacts(request):
-    return render(request,'randomfacts.html')
+    r2= requests.get('https://uselessfacts.jsph.pl/random.json?language=en')
+    random = r2.json()
+    text = random['text']
+    return render(request,'randomfacts.html', {'text':text})

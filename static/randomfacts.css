@@ -13,7 +13,8 @@
 
 #h2{
     font-size: smaller;
-    background-color: rgb(red, green, blue)
+    background-color: yellowgreen;
+    font-family: 'Arial';
     
 }
 
@@ -22,9 +23,43 @@
    font-family: 'Courier New', Courier, monospace;
    color: darkorange;
 }
+#p2{
+  font-weight: bold;
+   font-family: 'Algerian';
+   color: purple;
+}
 
 body{
   background-color: aqua;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
   font-size: xx-large;
+  color: darkorange;
+}
+
+img{
+  width: 200px;
+  height: 200px;
+  align-self: auto;
+  transition: transform 0.3s ease; /* Smooth transition */
+  animation: circular-motion-animation 4s linear infinite; /* Circular motion animation */
+  
+}
+
+@keyframes circular-motion-animation {
+    0% { transform: rotate(0deg); } /* Start from 0 degree rotation */
+    100% { transform: rotate(360deg); } /* Rotate 360 degrees for a full circle */
+}
+
+
+img:hover {
+    transform: scale(1.1); /* Scale up the image by 10% on hover */
+
+}
+
+#Facts{
+  font-size: smaller;
+  font-family:"Bradley Hand ITC" ;
+  font-style: italic;
+  color: crimson;
+  font: bold;
 }

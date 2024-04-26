@@ -7,9 +7,10 @@
 
 #p1{
     font-weight: bolder;
-    font-family: 'Times New Roman', Times, serif;
+    font-family: 'Algerian';
     background-color: chartreuse;
     text-align: justify;
+    
 }
 
 #marquee{
@@ -25,4 +26,46 @@ img{
 }
 body{
     background-color: chartreuse;
+
+
 }
+
+.dog-container {
+    width: 100px;
+    height: 100px; /* Make the container full screen height */
+    position: relative;
+    overflow: hidden;
+}
+
+.dog {
+    width: 150px;
+    height: 150px;
+    background-image:url('6.jpeg'); /* Replace 'dog.png' with your dog image */
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: -150px; /* Initially position the dog outside the left edge of the screen */
+    animation: move-dog 10s linear infinite; /* Dog movement animation */
+}
+
+.tail {
+    width: 20px;
+    height: 50px;
+    background-color: #000; /* Black */
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform-origin: top;
+    animation: wag-tail 1s ease-in-out infinite alternate; /* Tail wag animation */
+}
+
+@keyframes move-dog {
+    0% { left: -150px; } /* Start from outside the left edge of the screen */
+    100% { left: calc(100% + 150px); } /* Move to outside the right edge of the screen */
+}
+
+@keyframes wag-tail {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(30deg); }
+}
+
