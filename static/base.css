@@ -1,0 +1,28 @@
+#About{
+    font-size: larger;
+    background-color: brown;
+    font-family: 'Algerian';
+    
+}
+
+#p1{
+    font-weight: bolder;
+    font-family: 'Times New Roman', Times, serif;
+    background-color: chartreuse;
+    text-align: justify;
+}
+
+#marquee{
+    font-size: xx-large;
+    font-family: fantasy;
+    color: red;
+}
+
+img{
+    height: fit-content;
+    width: fit-content;
+    
+}
+body{
+    background-color: chartreuse;
+}
