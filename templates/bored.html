@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BORED</title>
+    {% load static %}
+<link rel="stylesheet" href="{% static 'bored.css' %} ">
+<p><a href="{% url 'randomfacts' %}">Go to Random Facts Page</a></p>    <!--Use this to navigate through pages-->
+  <p><a href="{% url 'students' %}">Go to Students Page</a></p>
+  <p><a href="{% url 'base' %}">Go to Base Page</a></p>
+  
+</head>
+<body>
+   
+    <button id="refreshBtn">Refresh</button>
+<script>
+        // Get references to the buttons
+      const refreshBtn = document.getElementById('refreshBtn');
+
+        // Add event listeners to the buttons
+        refreshBtn.addEventListener('click', function() {
+            location.reload();
+        });
+    </script>
+    <div id="Boredom">
+        <b><h1>BOREDOM</h1></b>
+        <p id="p1"><i><b>Are you bored my guy 🤔??</b></i></p>
+        <p id="p2">{{bored}}</p>
+        <p><i>Boredom is like being stuck in a waiting room with no magazines 🕰️. It's that feeling when time slows down and every minute feels like an eternity ⏳. Your mind wanders aimlessly, searching for something, anything, to capture your interest 🧠. You might find yourself scrolling through endless social media feeds, hoping for a spark of excitement 📱. But alas, boredom persists, like a stubborn cloud refusing to dissipate ☁️. It's a longing for adventure, a craving for novelty, and an invitation to get creative with your time 🎨. 
+            Boredom: the ultimate test of patience and imagination! 🤔✨"</i></p>
+        <p id="p1"><i><b>Do this then i believe 💪 🤔??</b></i></p>
+        <p id="p2">{{bored}}</p>
+    </div>
+    
+    
+</body>
+</html>

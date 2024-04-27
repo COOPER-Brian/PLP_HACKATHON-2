@@ -6,24 +6,77 @@
     <title>STUDENTS</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'students.css' %}">
+    <p><a href="{% url 'randomfacts' %}">Go to Random Facts Page</a></p>
+    <p><a href="{% url 'bored' %}">Go to Bored Page</a></p>
+    <p><a href="{% url 'base' %}">Go to Base Page</a></p>
+
+    <style>
+        /* CSS styles for display api view  */
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            grid-gap: 20px;
+        }
+        .item {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+    </style>
 </head>
 <body>
+    <button id="refreshBtn">Refresh</button>
+<script>
+        // Get references to the buttons
+      const refreshBtn = document.getElementById('refreshBtn');
+
+        // Add event listeners to the buttons
+        refreshBtn.addEventListener('click', function() {
+            location.reload();
+        });
+    </script>
     <div id="Students">
     <h2>Students</h2>
-    <b><p>🎓 Student Description 📚 
+   <!-- <b><p>🎓 Student Description 📚 
         A student is an individual engaged in academic learning, typically enrolled in an educational institution such as a school or university. They strive for knowledge 📚, growth 🌱, and personal development 🧠 while balancing studies 📝, extracurricular activities 🎨, 
         and social interactions 🤝. Students represent the future 🌟 of society.</p></b>
         <b><p>Here are random students:</p></b>
            <p>Name:<i>{{name}}</i></p>
            <p>Age:<i>{{age}}</i></p>
            <p>Gender:<i>{{gender}}</i></p>
-           <p>Address:<i>{{address}}</i></p>
+           <p>Address:<i>{{address}}</i></p>   -->
           <!-- <p><i>{{country}}</i></p> -->
-           <p>Course:<i>{{course}}</i></p>
-           <p>GPA:<i>{{gpa}}</i></p>
+           <!--<p>Course:<i>{{course}}</i></p>
+           <p>GPA:<i>{{gpa}}</i></p> -->
            <!-- <p><i>Image:</i> <img src="{{image}}" alt="Various dogs photos"></p> -->
-          <p>Email:<i>{{email}}</i></p>
+          <!--<p>Email:<i>{{email}}</i></p>
           <p>Phone:<i>{{phone}}</i></p>
+    </div>
+-->
+    
+<h1>Randomized STUDENTS RECORDS 📚 </h1>
+<b><p>🎓 Student Description 📚 
+    A student is an individual engaged in academic learning, typically enrolled in an educational institution such as a school or university. They strive for knowledge 📚, growth 🌱, and personal development 🧠 while balancing studies 📝, extracurricular activities 🎨, 
+    and social interactions 🤝. Students represent the future 🌟 of society.</p></b>
+<ul>
+    <div class="STudents">
+        {% for item in randomized_data %}
+            <div class="item">
+                <p>{{ item }}</p>
+            </div>
+        {% endfor %}
+    </div>
+
+
     </div>
 </body>
 </html>

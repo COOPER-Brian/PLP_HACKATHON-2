@@ -6,18 +6,43 @@
     <title>WELCOME</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'base.css' %} ">
+    
+    <!-- template.html -->
+  <p><a href="{% url 'randomfacts' %}">Go to Random Facts Page</a></p>
+  <p><a href="{% url 'students' %}">Go to Students Page</a></p>
+  <p><a href="{% url 'bored' %}">Go to Bored Page</a></p>
+ 
+
     <marquee id="marquee">WELCOME</marquee>
 </head>
 
 <body bgcolor="cream">
+    
+   <button id="refreshBtn">Refresh</button>
+
+
+    <script>
+        // Get references to the buttons
+      const refreshBtn = document.getElementById('refreshBtn');
+
+        // Add event listeners to the buttons
+        refreshBtn.addEventListener('click', function() {
+            location.reload();
+        });
+    </script>
+
 <div class="animated">
     <p><img src="{% static 'media/download.jpeg'  %}"></div></p>
 
     <div id="About">
        <h1>ABOUT</h1>
-       <a href="{% static 'randomfacts/' %}">Random Facts</a>
+       <!-- <a href="{% static 'randomfacts/' %}">Random Facts</a> -->
 <hr>
-        <p id="p1">Lets see what this is all About!!</p>
+  <b><p id="p1" >Are you a dog lover ?</p></b>
+  <p>Here are some breeds that you may like...</p>
+  <img src ="{{dog}}" alt="Various dogs photos">    
+
+<p id="p1">Lets see what this is all About!!</p>
         <b><p>Absolutely! Here's a description of dogs:
 
             
@@ -44,12 +69,8 @@
             In conclusion, dogs are more than just pets — they're beloved members of our families, loyal friends, and faithful companions who enrich our lives in countless ways. 🐶💖 Whether big or small, young or old, every dog has a special place in our hearts, making our world a brighter and happier place! 🌟🐾
             
             ---
-            
             Dogs truly are incredible creatures! Let me know if you'd like more information or if there's anything else I can provide about our furry friends! 🐾</p></b>
-        
-        <b><p id="p1" >Are you a dog lover ?</p></b>
-        <p>Here are some breeds that you may like...</p>
-        <img src="{{dog}}" alt="Various dogs photos">
+      
 </div>
 
 </body>

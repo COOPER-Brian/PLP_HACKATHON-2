@@ -37,8 +37,8 @@ body{
 }
 
 img{
-  width: 200px;
-  height: 200px;
+  width: 5%;
+  height: 5%;
   align-self: auto;
   transition: transform 0.3s ease; /* Smooth transition */
   animation: circular-motion-animation 4s linear infinite; /* Circular motion animation */
@@ -62,4 +62,10 @@ img:hover {
   font-style: italic;
   color: crimson;
   font: bold;
+}
+
+#ref{
+ font-size: small;
+ color: maroon;
+ font-family:'Tahoma';
 }

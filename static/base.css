@@ -21,10 +21,11 @@
 
 img{
     height: fit-content;
-    width: fit-content;
+    width:  150px;
     
     
 }
+
 body{
     background-color: chartreuse;
 

@@ -6,10 +6,25 @@
     <title>RANDOM FACTS</title>
     {% load static %}
     <link rel="stylesheet" href="{% static 'randomfacts.css' %}">
+    <div id="ref">
+  <p><a href="{% url 'students' %}">Go to Students Page</a></p>
+  <p><a href="{% url 'bored' %}">Go to Bored Page</a></p>
+  <p><a href="{% url 'base' %}">Go to Base Page</a></p>
+     </div>
 </head>
 <body>
+    <button id="refreshBtn">Refresh</button>
+<script>
+        // Get references to the buttons
+      const refreshBtn = document.getElementById('refreshBtn');
+
+        // Add event listeners to the buttons
+        refreshBtn.addEventListener('click', function() {
+            location.reload();
+        });
+</script>
     <div id="RandomFacts">
-        <a href="{% static  'students/' %}">STUDENTS</a>
+        <!-- <a href="{% static  'students/' %}">STUDENTS</a> -->
         <h1 id="h1">What are random facts?</h1>
         <p id="p1">"Random facts" typically refer to interesting pieces of information or 
             trivia that may not be directly related but are intriguing or surprising.</p>
